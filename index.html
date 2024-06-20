@@ -1,0 +1,781 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+				
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>Hidro jateamento</title>
+				    <style>body {overflow-x: hidden; font-size: 16px; background-color:white;}
+					@media(max-width: 768px){body{font-size: 14px;}}
+					@media(max-width: 480px){body{font-size: 12px;}}
+					  .formataServicos {
+						background-color: transparent !important;
+						height: 580px !important;
+					  }
+
+					  button {
+  float: right;
+  width: 150px;
+  height: 60px;
+  border: 3px solid #315cfd;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Montserrat', sans-serif;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+button:hover {
+  background: #315cfd;
+  color: white;
+  font-size: 1.5em;
+}
+
+					  * {margin: 0;
+						padding: 0;
+						font-family: 'Open Sans', sans-serif;}
+
+						.default{color: white;}
+
+					  .content {
+						width: 960px;
+						margin: 0 auto;
+						padding: 0 20px;
+						clear: both;
+						position: relative;
+					  }
+					  .top .content {
+						text-align: center;
+					  }
+					  .top .content .logo {
+						width: 180px;
+						display: inline-block;
+					  }
+					  .top .content h1 {
+						max-height: 150px;
+						text-indent: -3000px;
+						overflow: hidden;
+						height: 85px;
+						width: 150px;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 180px 85px;
+					  }
+					  .heightTopWithMenu {
+						height: 150px;
+						background: #c5c5c5;
+					  }
+					  .topWithMenu {
+						background: #60afd6; 
+						box-shadow: 0 0 20px #000;
+						width: 100%;
+						z-index: 2;
+						border-bottom: 2px solid #001a41;
+						position: fixed;
+						top: 0;
+						border-top: 4px solid #001641;
+					  }
+					  .topWithMenu .logoWithMenu {
+						margin-left: 4%;
+						display: inline-block;
+					  }
+					  .topWithMenu .logoWithMenu a {
+						display: inline;
+					  }
+					  .topWithMenu .logoWithMenu a h1 {
+						max-height: 150px;
+						text-indent: -3000px;
+						overflow: hidden;
+						height: 150px;
+						width: 150px;
+						background-repeat: no-repeat;
+						background-position: center;
+						background-size: 180px 85px;
+					  }
+					  .topWithMenu .topMenu {
+						display: inline;
+						line-height: 85px;
+						position: absolute;
+						top: 0;
+					  }
+					  .topWithMenu .topMenu .ulMenu {
+						display: inline;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item {
+						list-style-type: none;
+						display: inline-block;
+						margin-left: 40px;
+						position: relative;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item:hover ul.submenu {
+						display: block;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item a {
+						text-decoration: none;
+						color: #1b1b1b;
+						font-size: 22px;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item a:hover {
+						color: #0400ff;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item ul.submenu {
+						background: #212ff3;
+						border-radius: 3px;
+						position: absolute;
+						left: 0;
+						top: 65px;
+						list-style-type: none;
+						padding: 10px;
+						display: none;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item ul.submenu li.subMenu-item {
+						line-height: 22px;
+						width: 120px;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item ul.submenu li.subMenu-item a {
+						font-size: 14px;
+						color: #dbd8d8;
+					  }
+					  .topWithMenu .topMenu .ulMenu li.default-item ul.submenu li.subMenu-item a:hover {
+						color: #000000;
+					  }
+					  .fullBanner {
+						height: 362px;
+						background-color: #0547fc;
+						background-position: top;
+						background-repeat: no-repeat;
+						background-size: cover;
+					  }
+					  .fullBanner .left {
+						text-align: left;
+					  }
+					  .fullBanner .right {
+						text-align: right;
+					  }
+					  .fullBanner .center {
+						text-align: center;
+					  }
+					  .fullBanner .text .title {
+						font-weight: bold;
+						font-size: 35px;
+						color: #fff;
+						padding: 40px 0 0 0;
+					  }
+					  .fullBanner .text .text {
+						font-weight: lighter;
+						font-size: 20px;
+						line-height: 30px;
+						color: #ffffff;
+						padding: 20px 0 0 0;
+					  }
+					  .fullBanner .text a {
+						color: #f3f3f3;
+						text-decoration: none;
+						font-weight: bold;
+						text-transform: uppercase;
+						font-style: italic;
+						font-size: 18px;
+					  }
+					  .fullBanner .text a:hover {
+						text-decoration: underline;
+					  }
+					  .fullText {
+						width: 92%;
+						color: #333333;
+						padding: 4%;
+						line-height: 22px;
+						font-size: 16px;
+						font-weight: normal;
+					  }
+					  .fullText .italic {
+						font-style: italic;
+						font-family: Georia;
+						font-size: 22px;
+						line-height: 30px;
+					  }
+					  .doubleText {
+						width: 92%;
+						color: #333333;
+						padding: 4%;
+						line-height: 22px;
+						font-size: 16px;
+						font-weight: normal;
+					  }
+					  .doubleText p {
+						display: inline-table;
+						width: 46%;
+						text-align: justify;
+					  }
+					  .doubleText p.right {
+						padding: 0 0 0 4%;
+					  }
+					  .doubleText p span.sectionTitle {
+						font-size: 22px;
+						font-weight: bold;
+						padding: 4% 4% 0 4%;
+						width: 100%;
+						color: #333333;
+						padding: 4% 0;
+						display: block;
+					  }
+					  .sectionTitle {
+						font-size: 22px;
+						font-weight: bold;
+						padding: 4% 4% 0 4%;
+						width: 100%;
+						color: #333333;
+					  }
+					  .imageText {
+						width: 92%;
+						padding: 4%;
+					  }
+					  .imageText img {
+						float: left;
+						padding: 0 2%;
+					  }
+					  .imageText p {
+						width: 92%;
+						color: #333333;
+						padding: 4%;
+						line-height: 22px;
+						font-size: 16px;
+						font-weight: normal;
+						padding: 0 4%;
+						text-align: justify !important;
+						width: 600px;
+						min-height: 100px;
+					  }
+					  .textImage {
+						width: 92%;
+						padding: 4%;
+					  }
+					  .textImage img {
+						float: right;
+						padding: -10% 4% 0 0;
+					  }
+					  .textImage p {
+						width: 92%;
+						color: #333333;
+						padding: 4%;
+						line-height: 22px;
+						font-size: 16px;
+						font-weight: normal;
+						padding: 0 4%;
+					  }
+					  .newSection {
+						width: 100%;
+					  }
+					  .formFull {
+						width: 92%;
+						padding: 4%;
+					  }
+					  .formFull form fieldset {
+						border: none;
+						width: 100%;
+						position: relative;
+					  }
+					  .formFull form fieldset label {
+						width: 30%;
+						color: #333333;
+						margin-bottom: 10px;
+						margin-left: 1%;
+						display: inline-block;
+					  }
+					  .formFull form fieldset input.inputText {
+						width: 30%;
+						margin-bottom: 10px;
+						outline: none;
+						margin-left: 1%;
+						height: 30px;
+						line-height: 30px;
+						display: inline-block;
+						border: 1px solid #333333;
+					  }
+					  .formFull form fieldset textarea.textareaText {
+						width: 93.6%;
+						margin-bottom: 10px;
+						margin-left: 1%;
+						height: 50px;
+						resize: vertical;
+						line-height: 30px;
+						display: inline-block;
+						border: 1px solid #333333;
+						outline: none;
+					  }
+					  .formFull form fieldset input.inputSubmit {
+						background: #020041;
+						margin-left: 10px;
+						cursor: pointer;
+						height: 30px;
+						width: 80px;
+						line-height: 30px;
+						border: none;
+						color: #fff;
+					  }
+					  .formWithMaps {
+						padding-bottom: 40px;
+					  }
+					  .formWithMaps .form {
+						width: 46%;
+						display: inline-block;
+					  }
+					  .formWithMaps .form form fieldset {
+						border: none;
+						width: 100%;
+						position: relative;
+					  }
+					  .formWithMaps .form form fieldset label {
+						width: 92%;
+						padding: 0 4%;
+						color: #333333;
+						margin-bottom: 10px;
+						display: inline-block;
+					  }
+					  .formWithMaps .form form fieldset input.inputText {
+						outline: none;
+						width: 90%;
+						height: 30px;
+						line-height: 30px;
+						display: inline-block;
+						border: 1px solid #333333;
+						margin: 0 0 10px 4%;
+						padding-left: 4%;
+						margin-bottom: 10px;
+					  }
+					  .formWithMaps .form form fieldset textarea.textMensagem {
+						outline: none;
+						width: 90%;
+						resize: none;
+						height: 80px;
+						line-height: 30px;
+						display: inline-block;
+						border: 1px solid #333333;
+						margin: 0 0 10px 4%;
+						padding-left: 4%;
+						margin-bottom: 10px;
+					  }
+					
+					  .formWithMaps .maps {
+						width: 46%;
+						display: inline-block;
+					  }
+					  .formWithMaps .maps iframe {
+						margin-bottom: 34px;
+						height: 295px;
+						border-radius: 3px;
+						padding: 5px;
+						border: 1px solid #dad8d8;
+					  }
+					  .gallery {
+						width: 100%;
+						padding: 4% 0;
+					  }
+					  .content .gallery {
+						padding: 0 !important;
+						width: 100% !important;
+					  }
+					  .gallery div.item-gallery {
+						display: inline-block;
+					  }
+					  .scrolloff {
+						pointer-events: none;
+					  }
+					  .formWithMaps .maps {
+						pointer-events: none;
+					  }
+					  .fixedMenu {
+						width: 100%;
+						height: 70px;
+						background: #001941;
+						position: absolute;
+						left: 0;
+					  }
+					 
+					  .fixedMenu .itemMenuFixed:hover {
+						text-decoration: underline; 
+					  }
+					  .hide {
+						opacity: 0;
+					  }
+					  .bannerModel1 {
+						background-image: url(agua.jpg);
+						width: 100%;
+						height: auto;
+						position: relative;
+						background-color: #055bd4;
+					  }
+					  
+					  .bannerModel1 div.bannerModel1Img div.textBanner {
+						height: 362px;
+						position: relative;
+					  }
+					  .bannerModel1 div.bannerModel1Img div.textBanner p.title {
+						color: #fff;
+						font-size: 22px;
+						padding: 20px;
+						padding-top: 30px;
+						font-weight: bold;
+					  }
+					  .bannerModel1 div.bannerModel1Img div.textBanner p.text {
+						color: #fff;
+						font-size: 16px;
+						padding: 20px;
+						padding-top: 20px;
+						text-align: justify;
+						line-height: 30px;
+					  }
+					  .arrowLeft {
+						height: 362px;
+						position: absolute;
+						left: 0;
+						cursor: pointer;
+						background: url(../img/project/seta_esquerda.png) center no-repeat;
+						background-size: 50px;
+						width: 100px;
+						top: 0;
+					  }
+					  .arrowLeft:hover {
+						opacity: 0.7;
+					  }
+					  .arrowRight {
+						height: 362px;
+						position: absolute;
+						right: 0;
+						cursor: pointer;
+						background: url(../img/project/seta_direita.png) center no-repeat;
+						background-size: 50px;
+						width: 100px;
+						top: 0;
+					  }
+					  .arrowRight:hover {
+						opacity: 0.7;
+					  }
+					  .parentGrid {
+						background-color: #ffffff00;
+						width: 100%;
+					  }
+					  .parentGrid div.alignTop {
+						vertical-align: top;
+					  }
+					  .parentGrid div.itemGrid {
+						display: inline-block;
+						width: 258px;
+						text-align: justify;
+						padding: 20px;
+						margin: 40px 0;
+						margin-left: 15px;
+						position: initial;
+						top: 0;
+					  }
+					  .parentGrid a.iconGrid {
+						display: inline-block;
+						width: 100%;
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;
+						height: 100px;
+						padding: 0 0 5%;
+						margin-bottom: 10%;
+					  }
+					  .parentGrid span.iconGridSpan {
+						display: inline-block;
+						width: 100%;
+						background-position: center;
+						background-size: contain;
+						background-repeat: no-repeat;
+						height: 100px;
+					  }
+					  .startBandeiras {
+						position: absolute;
+						right: 30px;
+						top: -30px;
+						background: #ffffff;
+						border-radius: 3px;
+						font-size: 13px;
+						width: 200px;
+						padding: 10px 0;
+					  }
+					  .startBandeiras p {
+						padding-bottom: 15px;
+						text-align: center;
+					  }
+					  .startBandeiras a {
+						position: absolute;
+						left: 90px;
+						z-index: 10;
+					  }
+					  .startBandeiras img {
+						margin-right: 15px;
+					  }
+					  .startBandeiras img.lefBandeiras {
+						margin-left: 50px;
+					  }
+</style>
+</head>
+<body>
+<noscript>
+<div style="display:inline;">
+<img id="img1" height="1" width="1" style="border-style:none;" alt="" src="gatinho.jpeg"/>
+
+</div>
+</noscript>
+	
+					<div class="heightTopWithMenu">
+					</div>
+					<div class="topWithMenu">
+						<div class="content">
+							<div class="logoWithMenu">
+								<a href="index.html"><h1 style="background-image:url(logo\ hidrojato\ ferreira.png);">Hidro jateamentos</h1></a>
+							</div>
+							<div class="topMenu">
+								<ul class="ulMenu">	
+				
+					<li class="default-item">
+						<a class="itemMenuFixed" href="quemSomos">Quem Somos</a>
+					</li>
+				
+					<li class="default-item">
+						<a class="itemMenuFixed" href="servicos">Serviços</a>
+					</li>
+				
+					<li class="default-item">
+						<a class="itemMenuFixed" href="formulario">Fale Conosco</a>
+					</li>
+				
+				<li class="default-item" style="position:absolute; right:-340px; top:0;">
+					(61) 00000-0000
+				</li>
+			
+							</ul>
+						</div>
+					</div>
+				</div>
+			
+				<div class="bannerModel1">
+				<img id="imag1" src="agua.jpg" alt="">
+				</div>
+			
+				<div class="content">
+			
+				<a name="menu-quemSomos" id="menu-quemSomos" href="#" class="hide"></a>
+			
+					<p class="sectionTitle">Quem Somos</p>
+				
+					<div class="doubleText">
+						<p class="left">
+							<span class="sectionTitle"></span>descrição, especificações e referencias da impresa
+						</p>
+						<p class="right">
+							<span class="sectionTitle"></span>
+							 Todos os residuos são descartados em unidades de tratamento credenciadas, garantindo o controle do descarte de forma correta e segura respeitando as leis vigentes e o meio ambiente.
+						</p>
+					</div>
+				
+				<a name="menu-servicos" id="menu-servicos" href="#" class="hide"></a>
+			
+					<p class="sectionTitle">Nossos Serviços</p>
+				
+				<div class="parentGrid">
+			
+							<div class="itemGrid alignTop">
+								<a href="" target="_blank" class="iconGrid itemMenuFixed" style="height:100px !important; background-image:url(desentupimento.jpg);"></a>
+								<p class="text">
+									<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Desentupimento</strong></span></br></br>Nossa equipe utiliza equipamentos modernos que promovem a desobstrução e raspagem das tubulações, deixando livre dos resíduos.
+								</p>
+							</div>
+						
+							<div class="itemGrid alignTop">
+								<a href="" target="_blank" class="iconGrid itemMenuFixed" style="height:100px !important; background-image:url(hidrojateamento.jpg);"></a>
+								<p class="text">
+									<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Hidrojateamento</strong></span></br></br>O hidrojateamento consiste na aplicação de um jato de água de alta pressão sobre uma superfície, normalmente com a intenção de limpá-la ou desobstruí-la.
+								</p>
+							</div>
+						
+							<div class="itemGrid alignTop">
+								<a href="" target="_blank" class="iconGrid itemMenuFixed" style="height:100px !important; background-image:url(limpeza.jpg);"></a>
+								<p class="text">
+									<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Limpeza</strong></span></br></br>Pelo menos a cada seis meses é recomendado a limpeza e higienização de caixas d'água e cisternas.
+								</p>
+							</div>
+						</div>
+				</div>
+			
+				<div class="newSection" style="background:white;">
+			
+				<div class="content">
+			
+				<a name="menu-desentupimento" id="menu-desentupimento" href="#" class="hide"></a>
+			
+					<p class="sectionTitle">Desentupimento</p>
+				
+				<div class="parentGrid">
+			
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(vaso.jpg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Vaso Sanitário</strong></span></br></br>Desentupir o vaso sanitário pode ser algo simples, porém há sim um risco de ocorrer acidentes muito sérios além da sujeira.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(pia.jpg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Pia</strong></span></br></br>Consiste na limpeza do sifão, caso isto não resolva certamente o problema estará na tubulação, neste caso é melhor chamar um profissional.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(caixa\ de\ gordura.jpg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Caixa de Gordura</strong></span></br></br>Recomenda-se que a limpeza e/ou manutenção seja feita à cada 02 meses ou de acordo com a necessidade. 
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(ralo.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Ralo</strong></span></br></br>Para esse tipo de serviço nada substitui uma empresa de desentupimento com os aparelhos e técnicas certas para efetuar os trabalhos
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(pluviaais.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Redes Pluviais</strong></span></br></br>Evite surpresas e gastos futuros com o entupimento da sua Rede Pluvial e Esgoto, procure-nos e resolveremos esse seu problema .
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(telhado.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Calhas</strong></span></br></br>Fuja dos problemas causados pela sujeira nas calhas. Limpeza e manutenção auxilia a impedir entupimentos e danos à estrutura do seu imóvel.
+							</p>
+						</div>
+					</div>
+				</div>
+			
+				<div class="content">
+			
+				</div>
+			
+				<div class="newSection" style="background:white">
+			
+				<div class="content">
+			
+				<a name="menu-hidrojateamento" id="menu-hidrojateamento" href="#" class="hide"></a>
+			
+					<p class="sectionTitle">Hidrojateamento</p>
+				
+				<div class="parentGrid">
+			
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(p\ e\ f.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Pátios e Fachadas</strong></span></br></br>A utilização da água pressurizada concentrada em fortes jatos limpa facilmente sujeiras incrustadas em pisos, fachadas e superfícies.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(desentupimento.jpg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Hidrojato no Desentupimento</strong></span></br></br>Desentupimento com Hidrojato remove o acúmulo de materiais incrustados através de jato d'água de alta pressão. Faça um orçamento.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(maquina.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Máquinas Industriais</strong></span></br></br>Limpeza Técnica Industrial por Hidrojateamento, serviço eficiente, rápido e de qualidade no que se propõe. Uma ótima opção de serviço.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(tinta.png);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Remoção de Pintura</strong></span></br></br>Remoção de tinta e ferrugem de estruturas metálicas, tanques, flanges. Remoção de carepa de laminação. Também no setor imobiliário.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(calha.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Limpeza de Telhado</strong></span></br></br>Hidrojato para limpeza de telhado, caixas d'água e pós obra. Nosso trabalho é totalmente garantido pela tradição de nossa empresa.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(jato.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Hidrodecapagem</strong></span></br></br>Limpeza de superfícies utilizando-se a pressão da água , sem qualquer tipo de abrasivo ou solvente, sendo amigo do meio ambiente.
+							</p>
+						</div>
+					</div>
+				</div>
+			
+				<div class="newSection" style="background:white">
+			
+				<div class="content">
+			
+				<a name="menu-limpeza" id="menu-limpeza" href="#" class="hide"></a>
+			
+					<p class="sectionTitle">Limpeza</p>
+				
+				<div class="parentGrid">
+			
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(caixa\ dagua.jpg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Caixa d'água</strong></span></br></br>Esgotamento e lavagem de pare- des internas, enxague, esgota- mento dos resíduos, aspersão de cloro, reabastecimento e laudo bacteriológico.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(sisteerna.jpg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Cisternas</strong></span></br></br>Com um atendimento persona- lizado, atuamos com selo de qualidade para garantir a segurança hídrica do seu ambiente! Entre em contato.
+							</p>
+						</div>
+					
+						<div class="itemGrid alignTop">
+							<span class="iconGridSpan" style="height:140px !important; background-image:url(caixa\ dagua\ v.jpeg);"></span>
+							<p class="text">
+								<span style='text-align:center !important; width:100% !important; display:inline-block !important;'><strong>Caixa d'água vertical</strong></span></br></br>É mais um serviço que execu- tamos com a máxima excelência de qualidade, proporcionando higiene aos seus reservatórios de água potável. 
+							</p>
+						</div>
+					</div>
+				</div>
+			
+				<div class="content">
+			
+				</div>
+			
+				<div class="newSection" style="background:#155FC5">
+			
+				<div class="content">
+			
+				<a name="menu-formulario" id="menu-formulario" href="#" class="hide"></a>
+			
+					<p class="sectionTitle" style="color: white;">Fale Conosco</p>
+				
+					<div class="fullText">
+						<p class="default"><strong>Atendimento 24 hrs</br> </br> 
+				FONE: (61) 00000-0000</br> 
+				</br>
+				EMAIL:email.gmail.com</strong>
+				</p>
+					</div>
+		
+				</div>
+				<a href="index.html" style="position: relative;z-index: 99; height: 350px; display: block; width: 100%; width: 980px; margin: 0 auto; margin-top: 30px;"><div style="width:100%;  height: 320px;  background: url(logo\ hidrojato\ ferreira\ \(1\).png) center no-repeat;"></div></a>
+		
+				<a href="formulario .html"><button id="bf">
+					Deixe seu feedback 
+				  </button></a>
+</body>
+</html>
